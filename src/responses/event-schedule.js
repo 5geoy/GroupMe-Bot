@@ -19,7 +19,6 @@ async function respond() {
 			url: `https://api.groupme.com/v3/groups/${config.GROUP_ID}?token=${config.ACCESS_TOKEN}`,
 			json: true
 		});
-		);
 	} catch(err) {
 		console.error(err);
 	}
