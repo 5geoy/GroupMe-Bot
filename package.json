@@ -14,11 +14,11 @@
     "sprintf-js": "^1.0.3"
   },
   "engines": {
-    "node": "6.11.0"
+    "node": "14.16.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sw8lde/GroupMe-Bot"
+    "url": "https://github.com/5geoy/GroupMe-Bot"
   },
   "keywords": [
     "node",
