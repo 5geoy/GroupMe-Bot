@@ -1,6 +1,7 @@
 const http = require('http');
 const director = require('director');
 const bot = require('./bot');
+const cron = requre('node-cron')
 
 const router = new director.http.Router({
     '/' : {
@@ -22,7 +23,9 @@ const server = http.createServer((req, res) => {
   });
 
 const port = Number(process.env.PORT || 5000);
-
+cron.schedule("* * * * *", function(){
+    console.log('running every minute')
+});
 server.listen(port);
 
 function ping() {
