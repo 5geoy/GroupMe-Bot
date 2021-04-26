@@ -1,8 +1,13 @@
 const http = require('http');
 const director = require('director');
 const bot = require('./bot');
+const config = require('./config')
 const cron = require('node-cron')
-
+const path = require('path')
+const fs = require('fs');
+console.log(__dirname)
+let rawdata = fs.readFileSync(path.resolve(__dirname, './events.json'));
+let eventsData = JSON.parse(rawdata);
 const router = new director.http.Router({
     '/' : {
       post: bot.respond,
@@ -25,6 +30,17 @@ const server = http.createServer((req, res) => {
 const port = Number(process.env.PORT || 5000);
 cron.schedule("* * * * *", function(){
     console.log('running every minute')
+});
+eventsData.forEach(f =>{
+  cron.schedule(f.cronTime, function(){
+    console.log(f.eventName)
+    let body = {
+      "bot_id": config.BOT_ID,
+      "text": f.eventMessage
+    };
+    bot.postMsg(body)
+  });
+  console.log(f.eventName)
 });
 server.listen(port);
 

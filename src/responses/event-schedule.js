@@ -1,11 +1,7 @@
 const bot = require('../bot');
 const config = require('../config');
 const rp = require('request-promise');
-const path = require('path')
-const fs = require('fs');
-console.log(__dirname)
-let rawdata = fs.readFileSync(path.resolve(__dirname, './events.json'));
-let eventsData = JSON.parse(rawdata);
+
 function trigger(msg) {
 	return /(@event)/i.test(msg.text);
 }

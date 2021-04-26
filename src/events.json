@@ -1,0 +1,17 @@
+[
+        {
+            "eventName": "Holy Hour",
+            "eventMessage": "Come join us for Holy Hour at 8pm on Tuesday",
+            "cronTime": "1,5,9 * * * *"
+        },
+        {
+            "eventName": "Mass",
+            "eventMessage": "Come join us for Mass at 6:30pm on Wednesday",
+            "cronTime": "2,6,8 * * * *"
+        },
+        {
+            "eventName": "Mass and Brunch",
+            "eventMessage": "Come join us for Mass and Brunch at 9am on Saturday",
+            "cronTime": "3,7 * * * *"
+        }
+]
