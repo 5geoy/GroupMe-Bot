@@ -3,7 +3,7 @@ const config = require('../config');
 const rp = require('request-promise');
 const fs = require('fs');
 
-let rawdata = fs.readFileSync('events.json');
+let rawdata = fs.readFileSync('./events.json');
 let eventsData = JSON.parse(rawdata);
 function trigger(msg) {
 	return /(@event)/i.test(msg.text);
