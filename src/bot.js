@@ -17,7 +17,7 @@ function respond(arg) {
 
 	fs.readdirSync('./src/responses/').forEach(f => {
 		const resp = require('./responses/' + f);
-		console.log(msg)
+
 		if(resp.trigger && resp.respond && resp.trigger(msg)) {
 			console.log(`triggered ${f} from message: ${msg.text}`);
 
