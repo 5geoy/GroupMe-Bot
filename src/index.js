@@ -28,20 +28,24 @@ const server = http.createServer((req, res) => {
   });
 
 const port = Number(process.env.PORT || 5000);
-cron.schedule("* * * * *", function(){
-    console.log('running every minute')
-});
-eventsData.forEach(f =>{
-  cron.schedule(f.cronTime, function(){
-    console.log(f.eventName)
+//let bruh = []
+//bruh.push(cron.schedule("* * * * *", () =>{
+//    console.log('running every minute')
+//}))
+//let Tasklist = []
+for (let index = 0; index < eventsData.length; index++) {
+  f = eventsData[index]
+  cron.schedule(f.cronTime, () =>{
+    console.log("we're gettin somewhere")
     let body = {
       "bot_id": config.BOT_ID,
       "text": f.eventMessage
     };
     bot.postMsg(body)
-  });
+  })
   console.log(f.eventName)
-});
+}
+
 server.listen(port);
 
 function ping() {
