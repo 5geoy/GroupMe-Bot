@@ -1,7 +1,7 @@
 const http = require('http');
 const director = require('director');
 const bot = require('./bot');
-const cron = requre('node-cron')
+const cron = require('node-cron')
 
 const router = new director.http.Router({
     '/' : {
