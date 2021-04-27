@@ -43,8 +43,8 @@ for (let index = 0; index < eventsData.length; index++) {
         "bot_id": config.BOT_ID,
         "text": message
       }
-      bot.postMsg(body)
-      console.log(eventName)
+      //bot.postMsg(body)
+      //console.log(eventName)
     }
   }());
   console.log(f.eventName)
