@@ -34,16 +34,16 @@ const port = Number(process.env.PORT || 5000);
 //}))
 //let Tasklist = []
 for (let index = 0; index < eventsData.length; index++) {
-  cron.schedule(eventsData[index].cronTime,(() => {
+  cron.schedule(eventsData[index].cronTime,((indexy) => {
     return () =>{  
       body = {
         "bot_id": config.BOT_ID,
-        "text": eventsData[index].eventMessage
+        "text": eventsData[indexy].eventMessage
       }
       bot.postMsg(body);
-      console.log(eventsData[index].eventName);
+      console.log(eventsData[indexy].eventName);
     };
-  })());
+  })(index));
 };
 
 server.listen(port);
