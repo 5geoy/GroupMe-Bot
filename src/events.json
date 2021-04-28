@@ -2,16 +2,16 @@
         {
             "eventName": "Holy Hour",
             "eventMessage": "Come join us for Holy Hour at 8pm on Tuesday",
-            "cronTime": "2,4,6,8,0 * * * *"
+            "cronTime": "2,22,32,42,52 * * * *"
         },
         {
             "eventName": "Mass",
             "eventMessage": "Come join us for Mass at 6:30pm on Wednesday",
-            "cronTime": "1,3,5,7,9 * * * *"
+            "cronTime": "3,23,33,43,53 * * * *"
         },
         {
             "eventName": "Mass and Brunch",
             "eventMessage": "Come join us for Mass and Brunch at 9am on Saturday",
-            "cronTime": "2,3,4,7,8,9 * * * *"
+            "cronTime": "6,26,36,46,56 * * * *"
         }
 ]
