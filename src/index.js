@@ -28,11 +28,6 @@ const server = http.createServer((req, res) => {
   });
 
 const port = Number(process.env.PORT || 5000);
-//let bruh = []
-//bruh.push(cron.schedule("* * * * *", () =>{
-//    console.log('running every minute')
-//}))
-//let Tasklist = []
 for (let index = 0; index < eventsData.length; index++) {
   cron.schedule(eventsData[index].cronTime,((indexy) => {
     return () =>{  
@@ -46,7 +41,7 @@ for (let index = 0; index < eventsData.length; index++) {
             }
         ]
       }
-      //bot.postMsg(body);
+      bot.postMsg(body);
       console.log(eventsData[indexy].eventName);
     };
   })(index));
