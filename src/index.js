@@ -38,7 +38,13 @@ for (let index = 0; index < eventsData.length; index++) {
     return () =>{  
       body = {
         "bot_id": config.BOT_ID,
-        "text": eventsData[indexy].eventMessage
+        "text": eventsData[indexy].eventMessage,
+        "attachments" : [
+            {
+                "type" : "image",
+                "url" : eventsData[indexy].imageURL
+            }
+        ]
       }
       //bot.postMsg(body);
       console.log(eventsData[indexy].eventName);
