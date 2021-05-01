@@ -42,7 +42,8 @@ for (let index = 0; index < eventsData.length; index++) {
         ]
       }
       bot.postMsg(body);
-      console.log(eventsData[indexy].eventName);
+      console.log(body);
+      console.log(eventsData[indexy].eventName)
     };
   })(index));
 };
