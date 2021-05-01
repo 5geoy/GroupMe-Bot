@@ -1,17 +1,8 @@
 [
         {
-            "eventName": "Holy Hour",
-            "eventMessage": "Come join us for Holy Hour at 8pm on Tuesday(2nd minute)",
-            "cronTime": "2,22,32,42,52 * * * *"
-        },
-        {
-            "eventName": "Mass",
-            "eventMessage": "Come join us for Mass at 6:30pm on Wednesday(3rd minute)",
-            "cronTime": "3,23,33,43,53 * * * *"
-        },
-        {
-            "eventName": "Mass and Brunch",
-            "eventMessage": "Come join us for Mass and Brunch at 9am on Saturday(6th minute)",
-            "cronTime": "6,26,36,46,56 * * * *"
+            "eventName": "Night Prayer",
+            "eventMessage": "",
+            "imageURL": "https://i.groupme.com/2312x2135.jpeg.e335318e773541d2a917c9b3914b0187",
+            "cronTime": "0 15 * * 7"
         }
 ]
