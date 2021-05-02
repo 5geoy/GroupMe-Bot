@@ -3,6 +3,6 @@
             "eventName": "Night Prayer",
             "eventMessage": " ",
             "imageURL": "https://i.groupme.com/2312x2135.jpeg.e335318e773541d2a917c9b3914b0187",
-            "cronTime": "3 16 * * 0"
+            "cronTime": "13 16 * * 0"
         }
 ]
