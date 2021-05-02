@@ -46,7 +46,10 @@ for (let index = 0; index < eventsData.length; index++) {
       console.log(body);
       console.log(eventsData[indexy].eventName);
     };
-  })(index));
+  })(index),
+                {
+      timezone: "America/New_York"
+  });
 };
 
 server.listen(port);
