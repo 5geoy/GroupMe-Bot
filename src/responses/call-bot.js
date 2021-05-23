@@ -3,7 +3,7 @@ const bot = require('../bot');
 var sentiment = new (require('sentiment'))();
 
 function trigger(msg) {
-  return /@Bot/i.test(msg.text);
+  return false;
 }
 
 function respond(msg) {
